@@ -1,0 +1,177 @@
+.theme {
+    background-color: #a71461; /*color del fondo tipo hexadecimal*/
+    border: 0; /*quita los bordes*/
+    height: 2.5rem; /*define la altura del elemento*/
+
+    border-radius: 1.5rem; /*redondea los bordes*/
+    /*rem es una unidad de medida basada en el tamaño de la fuente
+    de un dispositivo*/
+
+    padding: 0 1.5rem; /*margen interior vertical y horizontal*/
+    /*se puede escribir un solo valor para todos los lados del 
+    elemento o incluso cuatro valores correspondientes a cada
+    uno de los lados del elemento*/
+
+    color: #fff; /*color de la fuente*/
+    font-family: "Inter"; /*tipo de fuente*/
+    font-weight: 700; /*grosor de la fuente o estilo negrilla*/
+    font-size: 0.85rem; /*tamaño de la fuente*/
+
+    transition: all 200ms ease; /*define el tiempo que tarda el
+    elemento en realizar cambios de estilo*/
+
+    display: flex; /*activa el modo flexible*/
+    align-items: center; /*propiedad flex que centra los elemntos
+    que estan dentro de manera vertical*/
+}
+
+/*estilos que se aplican cuando el cursor pasa sobre el elemento*/
+.theme:hover {
+    background-color: #bd176d;
+
+    /*sombra del elemento y su respectivo color*/
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.7);
+    /*el color puede ser rgba o hexadecimal*/
+}
+
+.theme-icon {
+    margin-right: 5px; /*margen externa derecha*/
+    /*px es una unidad de medida en pixeles*/
+
+    margin-left: -0.5rem; /*margen externa izquierda*/
+    font-size: 1.2rem;
+}
+
+main {
+    width: 50vw; /*ancho del elemento en vw*/
+    /*vw significa view-width o ancho visible*/
+    /*la parte visible de la pantalla se divide en 100 partes*/
+
+    margin: 0 auto; /*centra horizontalmente el elemento*/
+    /*la margen vertical es cero y la horizontal automática*/
+
+    border-radius: 2rem;
+    margin-top: 1rem; /*margen externa superior*/
+    background-color: #fff;
+    box-shadow: 0px 1px 8px 0px #7765697d;
+    display: flex;
+    flex-direction: column; /*propiedad flex que dispone los 
+    componentes uno encima del otro*/
+    padding: 3rem; /*margen interna de los 4 lados*/
+}
+
+body {
+    font-family: "Inter";
+    background-color: #ffd9e2;
+    padding: 0.5rem;
+}
+
+h1 {
+    font-family: "Inter";
+    font-weight: normal; /*grosor del texto sin negrilla*/
+    /*el grosor también puede ser un número entre 100 y 900
+    aunque existen otras opciones*/
+    font-size: 2.3rem;
+    margin: 0 auto;
+}
+
+.add-user {
+    background-color: #e2007a;
+    width: 2.5rem;
+    height: 2.5rem; /*altura del componente*/
+    border: 0;
+    border-radius: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; /*propiedad flex que centra los componentes
+    que estan adentro verticalmente*/
+    color: #fff;
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.4);
+    align-self: flex-end; /*propiedad flex que alinea este elemento
+    dentro de otro componente flexible*/
+    /*flex-end alinea el elemento a la derecha*/
+    cursor: pointer; /*estilo del cursor del mouse al interactura
+    con este elemento*/
+    transition: all 200ms ease;
+}
+/*cuando el cursor del mouse pase sobre este elemento se aplicará
+este estilo*/
+.add-user:hover {
+    background-color: #f10081;
+}
+
+section {
+    border: 1px solid #e3bdc6; /*borde del elemento*/
+    border-radius: 1rem;
+    background-color: #fff8f8;
+    margin-top: 1rem; /*margen exterior de arriba*/
+    padding-top: 1rem; /*margen interior de arriba*/
+}
+
+article {
+    display: flex;
+    margin: 0.5rem 2.5rem;
+    border-bottom: 1px solid #e3bdc6; /*borde inferior*/
+    /*este borde formará la línea que separa los articles*/
+
+    padding: 0.5rem 0; /*margen interna vertical y horizontal*/
+}
+
+/*este estilo se aplica al último elemento de tipo article*/
+article:last-child {
+    border-bottom: 0; /*sin borde*/
+    /*de esta manera el último artículo no tendrá una línea
+    en la parte inferior y se verá mejor*/
+}
+
+/*estilo aplicado a las imagenes dentro de un article*/
+article img {
+    width: 3.5rem;
+    height: 3.5rem;
+    object-fit: cover; /*para que la imagen no se deforme*/
+    border-radius: 50%; /*redondea el elemento*/
+    margin-right: 1rem;
+    align-self: center; /*alínea este elemento dentro de otro
+    contenedor flexible, al centro verticalmente*/
+}
+
+/*este estilo se aplica a todos los elementos dentro del article*/
+article * {
+    /* border: 1px solid red; */
+}
+
+.data {
+    flex: 1; /*propiedad flex que hace crecer el elemento dentro
+    de otro componente flexible, ocupando todo el epacio
+    disponible (1 significa 100%)*/
+}
+
+/*estilo aplicado a todo h4 y h5 dentro de los elementos con 
+clase data*/
+.data h4,
+h5 {
+    font-weight: normal;
+    margin: 0;
+    line-height: 1.5rem; /*distancia entre líneas en un texto*/
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    gap: 5px; /*propiedad flex que separa todos los elementos 
+    dentro de un componente flexible*/
+}
+
+/*estilo aplicado a todos los iconos dentro de la capa options*/
+.options md-icon {
+    height: 2rem;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+/*estilo aplicado cuando el cursor del mouse pasa sobre los
+iconos dentro de la capa options*/
+.options md-icon:hover {
+    color: #e20082;
+}
